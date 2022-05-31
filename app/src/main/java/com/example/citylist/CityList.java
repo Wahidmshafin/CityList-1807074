@@ -8,6 +8,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author Wahid Mahmood Shafin
+ * CityList class created.
+ */
+
 public class CityList
 {
     private List<City> cities=new ArrayList<>();
