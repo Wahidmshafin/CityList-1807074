@@ -76,4 +76,25 @@ public class MainActivityTest {
         Espresso.pressBack(); //Back button
     }
 
+    @Test
+    public void testLabWork()
+    {
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Dhaka"));
+        onView(withId(R.id.button_confirm)).perform(click());
+
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Khulna"));
+        onView(withId(R.id.button_confirm)).perform(click());
+
+        onData(anything()).inAdapterView(withId(R.id.city_list)).atPosition(0).perform(click());
+
+        onView(withId(R.id.show_Activity)).check(matches(isDisplayed()));
+
+        onView(withText("Dhaka")).check(matches(isDisplayed()));
+
+        onView(withId(R.id.backButton)).perform(click());
+        onView(withId(R.id.mainActivity)).check(matches(isDisplayed()));
+    }
+
 }
