@@ -17,10 +17,5 @@ public class showActivityTest
    @Rule
    public ActivityScenarioRule<showActivity> activityRule=new ActivityScenarioRule<showActivity>(showActivity.class);
 
-    @Test
-    public void testSwitch()
-    {
 
-
-    }
 }
