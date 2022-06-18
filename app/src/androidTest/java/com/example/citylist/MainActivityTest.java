@@ -87,6 +87,10 @@ public class MainActivityTest {
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Khulna"));
         onView(withId(R.id.button_confirm)).perform(click());
 
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Sylhet"));
+        onView(withId(R.id.button_confirm)).perform(click());
+
         onData(anything()).inAdapterView(withId(R.id.city_list)).atPosition(0).perform(click());
 
         onView(withId(R.id.show_Activity)).check(matches(isDisplayed()));
